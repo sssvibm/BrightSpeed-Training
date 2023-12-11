@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .alpha{
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        margin: 5px;
+        border: 3px groove grey;
+        background-color: rgb(204, 199, 199);
+        text-align: center;
+
+       
+    }
+
+    .alpha:hover{
+        cursor: pointer;
+        background-color: blueviolet;
+        color: aliceblue;
+        border-color: blueviolet;
+        font-weight: bolder;
+        font-size:medium;
+    }
+
+
+    img{
+        width: 250px;
+        height: 250px;
+    }
+
+    #hang{
+        margin-left: 40%;
+        backdrop-filter: blur(5px);
+        display: none;
+    }
+</style>
+<body>
+<div id="main">
+<span onclick="insertLetter(this)" class="alpha" id="A">A</span>
+<span onclick="insertLetter(this)" class="alpha" id="B">B</span>
+<span onclick="insertLetter(this)" class="alpha" id="C">C</span>
+<span onclick="insertLetter(this)" class="alpha" id="D">D</span>
+<span onclick="insertLetter(this)" class="alpha" id="E">E</span>
+<span onclick="insertLetter(this)" class="alpha" id="F">F</span>
+<span onclick="insertLetter(this)" class="alpha" id="G">G</span>
+<span onclick="insertLetter(this)" class="alpha" id="H">H</span>
+<span onclick="insertLetter(this)" class="alpha" id="I">I</span>
+<span onclick="insertLetter(this)" class="alpha" id="J">J</span>
+<span onclick="insertLetter(this)" class="alpha" id="K">K</span>
+<span onclick="insertLetter(this)" class="alpha" id="L">L</span>
+<span onclick="insertLetter(this)" class="alpha" id="M">M</span>
+<span onclick="insertLetter(this)" class="alpha" id="N">N</span>
+<span onclick="insertLetter(this)" class="alpha" id="O">O</span>
+<span onclick="insertLetter(this)" class="alpha" id="P">P</span>
+<span onclick="insertLetter(this)" class="alpha" id="Q">Q</span>
+<span onclick="insertLetter(this)" class="alpha" id="R">R</span>
+<span onclick="insertLetter(this)" class="alpha" id="S">S</span>
+<span onclick="insertLetter(this)" class="alpha" id="T">T</span>
+<span onclick="insertLetter(this)" class="alpha" id="U">U</span>
+<span onclick="insertLetter(this)" class="alpha" id="V">V</span>
+<span onclick="insertLetter(this)" class="alpha" id="W">W</span>
+<span onclick="insertLetter(this)" class="alpha" id="X">X</span>
+<span onclick="insertLetter(this)" class="alpha" id="Y">Y</span>
+<span onclick="insertLetter(this)" class="alpha" id="Z">Z</span>
+<h1 id="ans"></h1>
+<h3>Attempts:<span id="count"></span></h3>
+</div>
+<div id="hang"><img id="imgs" src="https://dordle-game.com/data/image/game/43980.png" alt=""></div>
+<script>
+    const countries = [
+  "UNITEDSTATES",
+  "CANADA",
+  "UNITEDKINGDOM",
+  "GERMANY",
+  "FRANCE",
+  "JAPAN",
+  "AUSTRALIA",
+  "BRAZIL",
+  "CHINA",
+  "INDIA",
+  "ITALY",
+  "MEXICO",
+  "RUSSIA",
+  "SOUTHAFRICA",
+  "SOUTHKOREA",
+  "SPAIN",
+  "SWEDEN",
+  "TURKEY",
+  "ARGENTINA",
+  "NETHERLANDS"
+];
+
+let count=5;
+let count_tag=document.getElementById("count")
+
+count_tag.innerText=count
+
+const ind=Math.floor(Math.random()* countries.length)
+const word=countries[ind]
+console.log(word);
+
+let h1_tag=document.getElementById("ans")
+console.log(h1_tag);
+
+
+
+for(let i=0;i<word.length;i++){
+    
+   h1_tag.innerHTML+=`<span id=${i}>__</span><span> </span>`
+    
+}
+
+function insertLetter(tag){
+    let inp=tag.innerText;
+    if(word.includes(inp)){
+         for(let i=0;i<word.length;i++){
+            if(inp==word.charAt(i)){
+                document.getElementById(i).innerText=inp
+            }
+         }
+    }
+    else{
+      count--
+      count_tag.innerText=count
+    }
+    
+    let bool=true
+
+    let last=document.getElementById(word.length-1).innerText
+    for(let i=0;i<word.length;i++){
+        let lett=document.getElementById(i)
+        
+        
+        if(lett.innerText=="__"){
+           bool=false
+        }
+    }
+
+    if(count==0){
+        document.getElementById("main").style.display="none"
+        document.getElementById("hang").style.display="block"
+    }
+
+    if(bool){
+        document.getElementById("main").style.display="none"
+        document.getElementById("hang").style.display="block"
+        document.getElementById("imgs").src="Screenshot 2023-12-11 140217.jpg"
+    }
+    
+
+    
+    
+
+   
+}
+
+</script>
+</body>
+</html>
