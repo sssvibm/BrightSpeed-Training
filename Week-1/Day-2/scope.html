@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a=10;
+        // let b=10;
+        // const c=10;
+
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+
+
+
+        //  function abc(){
+        //     {
+        //         var a=10;
+        //         let b=10;
+        //         const c=10;
+        //     }
+        // }
+        // abc()
+
+
+
+
+        
+        //     var a = 10;
+        //     let b = 10;
+        //     const c = 10;
+        // }
+
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+
+
+
+    //     class Person{
+    //        constructor(n){
+    //         this.name=n
+    //        }
+    //     }
+
+    //     let perObj=new Person("Vishnu")
+        
+    //     class Child extends Person{
+    //         constructor(a,n){
+    //             super(n)
+    //             this.age=a
+    //         }
+    //     }
+
+    //     let chilObj=new Child(3,"vishnu")
+    //    chilObj.gender="male"
+    //     console.log(chilObj);
+
+
+        // delete chilObj.gender
+        // console.log(chilObj);
+        // delete chilObj.age
+        // console.log(chilObj);
+
+
+        // for (const key in chilObj) {
+        //     console.log(chilObj[key]);
+        // }
+
+        // let arr=[1,2,3]
+
+        // for (const iterator of arr) {
+        //     console.log(iterator);
+        // }
+        
+
+        //polymorphism
+
+    //     class Parent{
+    //         constructor(){
+    //             this.name="parent"
+    //         }
+    //         disp(){
+    //             console.log("parent");
+    //         }
+    //     }
+
+    //     class Child extends Parent{
+    //         constructor(){
+    //             super()
+    //             this.name="child"
+    //         }
+    //         disp(){
+    //             console.log("child");
+    //         } 
+    //     }
+
+    //     class GrandChild extends Child{
+    //         constructor(){
+    //             super()
+    //             this.name="grandchild"
+    //         }
+    //         disp(){
+    //             console.log("grand child");
+    //         } 
+    //     }
+
+    //     let obj=new GrandChild()
+    //     console.log(obj.name);
+
+    //encapsu
+
+// function name() {
+//     let discount=10;
+
+//     function (){
+//         console.log(discount);
+//     }
+// }
+
+// let a=name()
+// a.disp()
+
+// function BankAccount(accountNumber, accountHolderName, balance) { 
+//     let _accountNumber = accountNumber; 
+//     let _accountHolderName = accountHolderName; 
+//     let _balance = balance; 
+  
+//     function showAccountDetails() { 
+//         console.log(`Account Number: ${_accountNumber}`); 
+//         console.log(`Account Holder Name: ${_accountHolderName}`); 
+//         console.log(`Balance: ${_balance}`); 
+//     } 
+  
+//     function deposit(amount) { 
+//         _balance += amount; 
+//         // showAccountDetails(); 
+//     } 
+  
+//     function withdraw(amount) { 
+//         if (_balance >= amount) { 
+//             _balance -= amount; 
+//             showAccountDetails(); 
+//         } else { 
+//             console.log("Insufficient Balance"); 
+//         } 
+//     } 
+  
+//     return { 
+//         show:showAccountDetails,
+//         deposit: deposit, 
+//         withdraw: withdraw 
+//     }; 
+// } 
+  
+// let myBankAccount = BankAccount("123456", "John Doe", 1000); 
+//   myBankAccount.show()
+// myBankAccount.deposit(500);  
+// myBankAccount.withdraw(2000);
+
+
+// class BankAccount ` 
+// 	constructor(accountNumber, accountHolderName, balance) { 
+// 		this._accountNumber = accountNumber; 
+// 		this._accountHolderName = accountHolderName; 
+// 		this._balance = balance; 
+// 	} 
+
+// 	showAccountDetails() { 
+// 		console.log(`Account Number: ${this._accountNumber}`); 
+// 		console.log(`Account Holder Name: ${this._accountHolderName}`); 
+// 		console.log(`Balance: ${this._balance}`); 
+// 	} 
+
+// 	deposit(amount) { 
+// 		this._balance += amount; 
+// 		this.showAccountDetails(); 
+// 	} 
+
+// 	withdraw(amount) { 
+// 		if (this._balance >= amount) { 
+// 			this._balance -= amount; 
+// 			this.showAccountDetails(); 
+// 		} else { 
+// 			console.log("Insufficient Balance"); 
+// 		} 
+// 	} 
+// } 
+
+// let myBankAccount = new BankAccount("123456", "John Doe", 1000); 
+// myBankAccount.deposit(500);
+
+// Output: Account Number: 123456 Account Holder Name: 
+//John Doe Balance: 150
+
+let arr=["vishnu","deek","itachi","sukuna","iterate"]
+
+for (const i of arr) {
+    if(i.includes("i")){
+        console.log(i);
+    }
+    
+    
+}
+
+ 
+     </script>
+</body>
+
+</html>
