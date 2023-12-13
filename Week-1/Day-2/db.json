@@ -1,3 +1,140 @@
 {
-    "a":{"id":1,"movie":"The Shawshank Redemption","rating":9.2,"image":"images/shawshank.jpg","imdb_url":"https://www.imdb.com/title/tt0111161/"}
+    "a": [
+        {
+            "id": 1,
+            "movie": "The Shawshank Redemption",
+            "rating": 9.2,
+            "lang":"english",
+            "image": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0111161/",
+            "u-tube":"https://youtu.be/PLl99DlL6b4?si=g09LsAOMfjqzq7fG"
+        },
+        {
+            "id": 2,
+            "movie": "The Godfather",
+            "rating": 9.2,
+            "lang":"english",
+            "image": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0068646/",
+            "u-tube":"https://youtu.be/UaVTIH8mujA?si=_BeUWmoRYCZUutFL"
+        },
+        {
+            "id": 3,
+            "movie": "The Dark Knight",
+            "rating": 9,
+            "lang":"english",
+            "image": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0468569/",
+            "u-tube":"https://youtu.be/EXeTwQWrcwY?si=0X5hyluFVpVT81fQ"
+        },
+        {
+            "id": 4,
+            "movie": "Pulp Fiction",
+            "rating": 8.9,
+            "lang":"english",
+            "image": "https://m.media-amazon.com/images/M/MV5BNTY1MzgzOTYxNV5BMl5BanBnXkFtZTgwMDI4OTEwMjE@._V1_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0110912/",
+            "u-tube":"https://youtu.be/tGpTpVyI_OQ?si=nG8TRHObjyB6QJ4n"
+        },
+        {
+            "id": 5,
+            "movie": "The Lord of the Rings: The Return of the King",
+            "rating": 9,
+            "lang":"english",
+            "image": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0167260/",
+            "u-tube":"https://youtu.be/r5X-hFf6Bwo?si=eRF1qOPW9vZVGVBM"
+        },
+        {
+            "id": 6,
+            "movie": "The Good, the Bad and the Ugly",
+            "rating": 8.8,
+            "lang":"english",
+            "image": "https://m.media-amazon.com/images/M/MV5BNjJlYmNkZGItM2NhYy00MjlmLTk5NmQtNjg1NmM2ODU4OTMwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0060196/",
+            "u-tube":"https://youtu.be/WCN5JJY_wiA?si=eMpCF8ncrKylNjVy"
+        },
+        {
+            "id": 7,
+            "movie": "Fight Club",
+            "rating": 8.8,
+            "lang":"english",
+            "image": "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0137523/",
+            "u-tube":"https://youtu.be/qtRKdVHc-cE?si=uyGTQTrbkTohcVVU"
+        },
+        {
+            "id": 8,
+            "movie": "The Lord of the Rings: The Fellowship of the Ring",
+            "rating": 8.8,
+            "lang":"english",
+            "image": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0120737/",
+            "u-tube":"https://youtu.be/V75dMMIW2B4?si=LpPhtExdlCDLMvnp"
+        },
+        {
+            "id": 9,
+            "movie": "Forrest Gump",
+            "rating": 8.8,
+            "lang":"english",
+            "image": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0109830/",
+            "u-tube":"https://youtu.be/bLvqoHBptjg?si=XWmHeh3JZ-9-42cm"
+        },
+        {
+            "id": 10,
+            "movie": "Inception",
+            "rating": 8.8,
+            "lang":"english",
+            "image": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt1375666/",
+            "u-tube":"https://youtu.be/YoHD9XEInc0?si=sP11fde_WTsQQHe6"
+        },
+        {
+            "id":11,
+            "movie":"Leo",
+            "rating":7.5,
+            "lang":"tamil",
+            "image":"https://static.moviecrow.com/gallery/20230918/221063-Leo%20Vijay%20Kannada.jpg",
+            "imdb_url":"https://www.imdb.com/title/tt15654328/",
+            "u-tube":"https://youtu.be/Po3jStA673E?si=uULCS6hoTlP8iWjI"
+            
+        },
+        {
+            "id":12,
+            "movie":"Mankatha",
+            "rating":7.5,
+            "lang":"tamil",
+            "image":"https://m.media-amazon.com/images/M/MV5BZjEwYjkxZGEtMjZlMy00MDZhLTk0MWYtNDY0NTZiNmZkM2Q4XkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg",
+            "imdb_url":"https://www.imdb.com/title/tt1705772/",
+            "u-tube":"https://youtu.be/vHESM8iR1JE?si=DEsx0KUtwUp-S7Ej"
+        },
+        {
+            "id":13,
+            "movie":"Vikram",
+            "rating":8,
+            "lang":"tamil",
+            "image":"https://m.media-amazon.com/images/M/MV5BMDRiOWNjYjUtMDI0ZC00MDMyLTkwZDItNTU5NWQ1NjEyNGYxXkEyXkFqcGdeQXVyMTIyNzY0NTMx._V1_FMjpg_UX1000_.jpg",
+            "imdb_url":"https://www.imdb.com/title/tt9179430/",
+            "u-tube":"https://youtu.be/NXSigiaZ0W0?si=fo0TwUraHdl5XgNf"
+        },
+        {
+            "id":14,
+            "movie":"Jawan",
+            "rating":6.3,
+            "lang":"hindi",
+            "image":"https://m.media-amazon.com/images/M/MV5BOWI5NmU3NTUtOTZiMS00YzA1LThlYTktNDJjYTU5NDFiMDUxXkEyXkFqcGdeQXVyMTUzNjEwNjM2._V1_FMjpg_UX1000_.jpg",
+            "imdb_url":"https://www.imdb.com/title/tt15354916/",
+            "u-tube":"https://youtu.be/MWOlnZSnXJo?si=5W7JJRm-gs16u9m7"
+        },
+        {
+            "id":15,
+            "movie":"KGF-2",
+            "rating":8.5,
+            "lang":"kannada",
+            "image":"https://m.media-amazon.com/images/M/MV5BZjg0Njk4OWYtNTVkMi00YjVjLTg2MjYtZDVhNzE2M2YyNDQxXkEyXkFqcGdeQXVyMTIyMzgzNzUy._V1_.jpg",
+            "imdb_url":"https://www.imdb.com/title/tt10698680/",
+            "u-tube":"https://youtu.be/JKa05nyUmuQ?si=xutoJRkDV1D80gF6"
+        }
+    ]
 }

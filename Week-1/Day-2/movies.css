@@ -51,6 +51,66 @@ div{
 
 .reglog:hover{
     background-color: rgb(179, 23, 226);
+    border-color:rgb(179, 23, 226) ;
     color: aliceblue;
     font-weight: bolder;
 }
+
+.add:hover
+{
+    background-color: rgb(179, 23, 226);
+    border-color:rgb(179, 23, 226) ;
+    color: aliceblue;
+    font-weight: bolder;
+}
+
+.movies{
+    height: 600px;
+    width: 820px;
+    background-color: rgb(251, 251, 251);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+.id_mov{
+    height: 370px;
+    width: 250px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 4px rgba(98, 97, 96, 0.409);
+    
+}
+
+.img{
+    margin: 0;
+    height: 250px;
+    width: 250px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BNjJlYmNkZGItM2NhYy00MjlmLTk5NmQtNjg1NmM2ODU4OTMwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg");
+    background-size: cover;
+}
+h3{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.rat,.lang,.imdb{
+    margin-left: 10px;
+    font-weight: lighter;
+    color: grey;
+    overflow: hidden;
+}
+
+
+.fa-star{
+    color: yellow;
+}
+
+.img:hover{
+    background-image: linear-gradient(to right,rgba(255, 0, 0, 0.123),rgba(255, 255, 255, 0.564)),url("https://i.pinimg.com/1200x/e7/1d/d0/e71dd0647c712f5e4bf1f5e68079ad40.jpg");
+    background-size: cover;
+    cursor: pointer;
+}
+

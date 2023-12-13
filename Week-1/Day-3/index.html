@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>add</button>
+    <button>subract</button>
+    <script>
+        //overriding
+    //     class P {
+    //         constructor() {
+    //             this.name = "Parent"
+    //         }
+
+    //          disp() {
+    //             console.log(this.name);
+    //         }
+    //     }
+
+    //     class C extends P{
+    //         constructor() {
+    //             super()
+    //             this.name = "Child"
+    //         }
+    //         disp() {
+    //             console.log(this.name);
+    //         }
+    //     }
+
+    //     class GC extends C {
+    //         constructor() {
+    //             super()
+    //             this.name = "GrandChild"
+    //         }
+    //         disp() {
+    //             console.log(this.name);
+    //         }
+    //     }
+
+    //     let pObj=new P()
+    //     let cObj=new C()
+    //     let gcObj=new GC()
+
+    //   pObj.disp()
+    //   cObj.disp()
+    //   gcObj.disp()
+
+    // function add(){
+    //     n1=parseInt(n1)
+    //     n2=parseInt(n2)
+    //     alert(n1+n2)
+    // }
+
+    // function sub(){
+    //     n1=parseInt(n1)
+    //     n2=parseInt(n2)
+    //     alert(n1-n2)
+    // }
+
+    // let n1=prompt("enter the first number")
+    // let n2=prompt("enter the second number")
+    // let opp=prompt("add or subract?")
+
+    // if(opp=="add"){
+    //     add()
+    // }
+    // else{
+    //     sub()
+    // }
+
+
+    // console.log(a);
+    // var a=10;
+  
+
+//   let arr=[4,2,3,1]
+
+//   arr.push(5)
+//   console.log(arr);
+//   arr.pop()
+//   console.log(arr);
+
+//   arr.shift()
+//   console.log(arr);
+//   arr.unshift(1)
+//   console.log(arr);
+
+//   console.log(arr.slice(0,3)); //start,end-1
+
+//   console.log(arr.slice(-4,4));
+
+//   arr.splice(0,1,"hi")
+//   console.log(arr);
+
+// console.log(arr.join("'"));
+
+// console.log(arr.sort((a,b)=>a+b));
+
+// arr.forEach(function(v,i,arr){
+//     console.log(i+":"+v);
+//     console.log(arr);
+// })
+
+// let arr=[{
+//     name:"Sukuna",
+//     age:10
+// },
+// {
+//     name:"Gojo",
+//     age:15
+// },{
+//     name:"Hakari",
+//     age:20
+// }]
+
+
+// let arr2=arr.filter((e,v)=>{
+//     return e.age%2===0
+// })
+
+// console.log(arr2);
+
+
+// let arr=[{
+//     name:"shirt",
+//     price:2000
+// },
+// {
+//     name:"crogs",
+//     price:1000
+// },
+// {
+//     name:"bag",
+//     price:500
+// }]
+
+// let arr2=arr.map((e)=>{
+//     return e.price-5
+// })
+
+// console.log(arr2);
+
+// let arr=[1,2,3,4,5]
+
+// let sum1=arr.reduce((acc,ele)=>{
+//     return acc+ele
+// })
+// console.log(sum1);
+
+// let sum2=arr.reduce((acc,ele)=>{
+//     return acc+ele
+// },3)
+// console.log(sum2);
+
+let str="hello it is good to see you"
+
+let str2=str.split(" ")
+
+let ans="";
+
+for (const i of str2) {
+    let word=i.charAt(0).toUpperCase()
+    word+=i.slice(1,i.length)
+    ans+=`${word} `
+}
+
+console.log(ans);
+
+
+
+
+    
+
+    </script>
+</body>
+
+</html>
