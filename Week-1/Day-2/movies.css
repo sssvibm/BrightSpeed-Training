@@ -37,25 +37,6 @@ div{
     margin: 7px;
 }
 
-.auth{
-   margin-left: 85%;
-   position:absolute
-}
-
-.reglog{
-    margin-left: 45px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(252, 252, 252);
-    border-color: aliceblue;
-}
-
-.reglog:hover{
-    background-color: rgb(179, 23, 226);
-    border-color:rgb(179, 23, 226) ;
-    color: aliceblue;
-    font-weight: bolder;
-}
-
 .add:hover
 {
     background-color: rgb(179, 23, 226);
@@ -65,6 +46,7 @@ div{
 }
 
 .movies{
+    margin-top: 0;
     height: 600px;
     width: 820px;
     background-color: rgb(251, 251, 251);
@@ -109,8 +91,21 @@ h3{
 }
 
 .img:hover{
-    background-image: linear-gradient(to right,rgba(255, 0, 0, 0.123),rgba(255, 255, 255, 0.564)),url("https://i.pinimg.com/1200x/e7/1d/d0/e71dd0647c712f5e4bf1f5e68079ad40.jpg");
+    background-image: linear-gradient(to right,rgba(255, 0, 0, 0.61),rgba(255, 255, 255, 0.564)),url("https://img.freepik.com/premium-vector/youtube-logo-circle-red-social-media-logo_197792-4982.jpg");
     background-size: cover;
     cursor: pointer;
 }
 
+#close{
+    margin-left: 802px;
+    margin-bottom: 0px;
+}
+
+.anc_img{
+    display: inline-block;
+    margin: 0;
+    height: 250px;
+    width: 250px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}

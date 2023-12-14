@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="h">h1</h1>
+    <h1 class="h">h3</h1>
+    <h1 class="h">h2</h1>
+
+
+    <input type="text" id="inp">
+    <button>click</button>
+    <h1 style="font-weight: bolder;" id="disp_cont"></h1>
+
+
+    <h1 id="clc">Click Here!</h1>
+
+    <button id="but">Click For Names</button>
+    <div id="nam"></div>
+
+
+    <form action="" id="form">
+        <input type="text" name="" id="name" placeholder="Enter the name">
+        <input type="password" name="" id="pwd" placeholder="Enter the password">
+        <input type="submit">
+    </form><br><br><br>
+
+    <div id="task5"></div>
+
+
+
+
+</body>
+<script>
+    // let a=10;
+
+    // function h(){
+    //    let a=20
+    //    return function(){
+    //     let h="hi"
+    //     return h
+    //    }
+    // }
+    // let fun=h()
+    // console.log(fun());
+
+    //callback queue
+
+    // function a(){
+    //     console.log("print statement");
+    // }
+
+    //  function b(){
+    //     setInterval(()=>{
+    //         console.log("second statement");
+    //     },3000)
+    // }
+
+    // function c(){
+    //     console.log("third statement");
+    // }
+
+    // a()
+    // b()
+    // c()
+
+
+
+    //task-1
+    // let a=document.getElementsByTagName("h1")
+    // console.log(a);
+
+    // let b=document.querySelectorAll("h1")
+    // console.log(b[0]);
+
+    // let c=document.getElementsByClassName("h")
+    // console.log(c);
+
+    // setTimeout(()=>b[0].style.color="red",2000)
+
+
+    //task-2
+    // let inp=document.querySelector("#inp")
+
+    // let btn=document.querySelector("button")
+
+    // btn.addEventListener("click",()=>{
+    //    document.querySelector("#disp_cont").textContent=inp.value
+    // })
+
+
+    //task-3
+    // let h1=document.querySelector("#clc")
+    // h1.addEventListener("click",()=>{
+    //     h1.textContent="I Got Clicked!"
+    //     console.log(h1.style.backgroundColor="pink");
+    // })
+
+    // let ob1={
+    //     name:"Vishnu",
+    //     city:"Chennai",
+
+    // }
+
+
+    //task-4
+    // let ob1={
+    //     name:"Vishnu",
+    //     city:"Chennai"
+    // }
+
+    // let ob2={
+    //     name:"Naruto",
+    //     city:"Hidden Leaf"
+    // }
+
+    // let ob3={
+    //     name:"Sung Jin Hoo",
+    //     city:"Dungeon"
+    // }
+
+    // let arr=[ob1,ob2,ob3]
+
+    // let but=document.getElementById("but")
+    // let div=document.getElementById("nam")
+
+    // but.addEventListener("click",()=>{
+    //     console.log(event);
+    //        arr.map((v)=>{
+    //         div.innerHTML+=`<h1>${v.name}</h1>`
+
+    //     })
+
+
+    // })
+
+
+    //task-5
+    //    let uname=document.getElementById("name")
+    //    let pwd=document.getElementById("pwd")
+
+    //    let form=document.getElementById("form")
+    //    form.addEventListener("submit",()=>{
+    //     event.preventDefault()
+    //     console.log(uname.value);
+    //     console.log(pwd.value);
+    //    })
+
+
+
+    //task-6
+    // let divEle = document.getElementById("task5")
+    // let arr = [{name:"Vishnu"}, {name:"Hakari"}, {name:"ChinguduChan"}]
+
+    // arr.map((v, i) => {
+    //     divEle.innerHTML += `<h1 onclick=rem(${i})>${v.name}</h1>`
+    // })
+
+    // function rem(id) {
+    //     divEle.innerHTML = ""
+    //     arr.splice(id, 1)
+    //     arr.map((v, i) => {
+    //         divEle.innerHTML += `<h1 onclick=rem(${i})>${v.name}</h1>`
+    //     })
+
+    // }
+
+
+
+
+</script>
+
+</html>
