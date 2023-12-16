@@ -1,0 +1,19 @@
+{
+  "log": [
+    {
+      "id": 1,
+      "name": "Vishnu",
+      "password": "1234"
+    },
+    {
+      "name": "Deekshit",
+      "password": "5678",
+      "id": 2
+    },
+    {
+      "name": "Shreyas",
+      "password": "9009",
+      "id": 3
+    }
+  ]
+}
