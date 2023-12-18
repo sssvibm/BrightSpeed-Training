@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <input type="text" id="name_log" placeholder="Enter The Name"><br><br>
+        <input type="password" name="" id="pwd_log" placeholder="Enter The Password"><br><br>
+        <button onclick="log()">Login</button>
+    </div>
+</body>
+
+<script>
+   async function log(){
+        event.preventDefault()
+        let res = await fetch("http://localhost:3000/info");
+        let data = await res.json();
+        console.log(data);
+
+        let name_log=document.getElementById("name_log").value
+        let pwd_log=document.getElementById("pwd_log").value
+        let a=document.getElementById("a")
+
+        let bool=false
+
+        data.map((v)=>{
+          if(v.name===name_log && v.password===pwd_log){
+            bool=true
+          }
+        })
+
+        if(bool){
+           location.href="http://localhost:5500/week-task-1/dashboard.html"
+        }
+        else{
+            alert("Invalid credentials")
+        }
+   
+    }
+</script>
+</html>

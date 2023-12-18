@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #b1{
+        display: none;
+        width: 350px;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <h1>Register</h1>
+        <input type="text" id="name_reg" placeholder="Enter The Name" required><br><br>
+        <input type="password" name="" id="pwd_reg" placeholder="Enter The Password" required><br><br>
+        <input type="email" name="" id="email_reg" placeholder="Enter your e-mail" required><br><br>
+        <button id="but" onclick="reg()">Register</button>
+    </div>
+
+    <h1 id="b1">Successfully Registered!</h1>
+
+    <script>
+        function reg() {
+            event.preventDefault()
+            const rg_name = document.getElementById("name_reg").value
+            const rg_pwd = document.getElementById("pwd_reg").value
+            const rg_email = document.getElementById("email_reg").value
+
+            console.log(rg_name);
+            console.log(rg_pwd);
+
+            const ob = {
+                name: rg_name,
+                password: rg_pwd,
+                email: rg_email
+            }
+
+            let b = false
+
+
+            let res = fetch("http://localhost:3000/info", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(ob)
+            }).then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+                .then(data => {
+                    // Handle successful response
+                    console.log(data);
+                })
+                .catch(error => {
+                    // Handle errors
+                    console.error('Error:', error);
+                    b = true
+                    alert('An error occurred during the request.');
+                });
+
+
+           
+
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
