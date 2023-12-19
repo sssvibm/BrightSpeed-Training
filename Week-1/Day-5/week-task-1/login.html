@@ -16,6 +16,7 @@
 
 <script>
    async function log(){
+     console.log(location.href);
         event.preventDefault()
         let res = await fetch("http://localhost:3000/info");
         let data = await res.json();
@@ -34,7 +35,10 @@
         })
 
         if(bool){
-           location.href="http://localhost:5500/week-task-1/dashboard.html"
+
+           location.href= location.href.replace("login","dashboard")
+
+           
         }
         else{
             alert("Invalid credentials")

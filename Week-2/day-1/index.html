@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="a"><button id="but">click</button></a>
+    <h1 id="h">heading</h1>
+    <img id="img">
+    <script>
+
+        console.log(a);
+        var a=10
+        console.log(document.getElementById("h"));
+        console.log(document.getElementById("img"));
+
+
+        let capAlpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let smallAlpha="abcdefghijklmnopqrstuvwxyz"
+
+        let string="this me with the bonky donky"
+        let ans="";
+
+        let but=document.getElementById("but")
+        but.addEventListener("click",()=>{
+            let a=document.getElementById("a")
+            a.href="https://www.google.com/"
+            console.log(a);
+            
+        })
+      
+
+        for(let i=0;i<string.length;i++){
+            if(string.charAt(i)==" " || i==0){
+                let check;
+
+                if(i==0){
+                   check=string.charAt(i)
+                }
+                else{
+                    check=string.charAt(i+1)
+                    ans+=" "
+                    i++
+                }
+
+               for(let j=0;j<smallAlpha.length;j++){
+                if(check==smallAlpha.charAt(j)){
+                     ans+=capAlpha.charAt(j)
+                }
+               }
+
+               
+            }
+
+
+            else{
+             ans+=string.charAt(i)
+            }
+        }
+
+        console.log(ans);
+       
+    </script>
+</body>
+</html>

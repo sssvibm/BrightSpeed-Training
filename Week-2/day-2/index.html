@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="demo">
+    <h1> {{1+2}} </h1>
+    <h1> {{5>5}}</h1>
+    <h1>{{num}}</h1>
+
+    <div ng-controller="userController as ctrl">
+        <h1>{{ctrl.name}}</h1>
+        <h1>{{ctrl.age}}</h1>
+        <h1>{{ctrl.method()}}</h1>
+
+        <div ng-controller="userController2 as ctrl2">
+            <h1>{{ctrl2.name}}</h1>
+            <h1>{{ctrl2.age}}</h1>
+            <h1>{{ctrl2.method()}}</h1>
+        </div>
+
+     <div ng-controller="scopeController">
+        <h1>{{product}}</h1>
+
+     </div> 
+
+
+     <div ng-controller="scopeParaCtrl">
+        <h1>{{city}}</h1>
+
+     </div>
+
+    </div>
+
+
+    <hr>
+
+    
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+
+      var app = angular.module("demo",[])
+      function jsFunction(){
+        this.name="Vishnu"
+        this.age=22
+
+        this.method=()=>{
+            return "method1"
+        }
+      }
+
+      let name="Itachi"
+
+      function jsFunction2(){
+        this.name=name
+        this.age=28
+
+        this.method=()=>{
+            return "method2"
+        }
+      }
+
+
+      app.controller("userController",jsFunction)
+
+      app.controller("userController2",jsFunction2)
+
+
+      app.controller("scopeController",function($scope){
+       $scope.product="Football"
+      })
+
+      app.controller("scopeParaCtrl",["$scope","$window",function(s,w){
+       s.city="Chennai"
+      }])
+
+
+      //task
+      app.controller("countController",["$scope",function(s){
+        s.fun=()=>{
+          console.log("Hi");
+        }
+      }])
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="demo">
+    <div ng-controller="countController">
+        <button ng-click="fun()">Click</button>
+        <h3>Fruits:{{arr[0]}},{{arr[1]}}</h3>
+        <h3>I am {{obj.name}} aged {{obj.age}} and i work in {{obj.comp}}</h3>
+
+
+        <button ng-click="add()">Add</button>
+        <button ng-click="sub()">Subract</button>
+        <button ng-click="multiply()">Multiply</button>
+
+        <h3>{{ans}}</h3>
+
+        <input type="text" ng-model="inp">
+        <button ng-click="print()">Print</button>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+      <script>
+        var app=angular.module("demo",[])
+
+
+
+        
+        app.controller("countController",["$scope",function(s){
+        //consoling hi
+        s.fun=()=>{
+          console.log("Hi");
+        }
+        
+
+        //array
+        s.arr=["apple","mango"]
+        
+
+        //object
+        s.obj={
+          name:"Vishnu",
+          age:22,
+          comp:"Revature"
+
+        }
+        
+
+
+        //addition,subraction,multiplication
+        var a=10
+        var b=10
+
+        s.ans;
+
+        s.add=()=>{
+          s.ans=a+b
+        }
+
+        s.sub=()=>{
+          s.ans=a-b
+        }
+
+        s.multiply=()=>{
+          s.ans=a*b
+        }
+        
+
+        s.print=()=>{
+          console.log(s.inp);
+        }
+
+
+
+
+      }])
+      </script>
+</body>
+</html>
