@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+  li{
+    width: 200px;
+    cursor: pointer;
+    border: 1px rgba(240, 129, 222, 0.566) groove;
+    background-color: rgba(241, 137, 172, 0.189);
+  }
+</style>
 <body ng-app="app" ng-controller="lsCtrl">
     <div id="log" ng-show="flag">
       <h1>Login</h1>
@@ -26,6 +35,13 @@
 
         <a >Already Registered?</a><a href="" ng-click="nav()">Login</a>
 
+    </div><br><br><br><br>
+
+    <div>
+      <h1>Delete List</h1>
+        <ul>
+          <li ng-repeat="f in fruits" ng-click="deleteList(f.name)">{{f.name}}</li>
+        </ul>
     </div>
     
 
@@ -48,7 +64,20 @@
            $scope.info=[]
 
            $scope.register=()=>{
-            console.log($scope.uname_reg);
+            let sameName=false
+            for(let i=0;i<$scope.info.length;i++){
+                if($scope.uname_reg==$scope.info[i].name){
+                  sameName=true
+                }
+            }
+
+            if(sameName){
+              alert("UserName Already Exists")
+            }
+
+            else{
+
+
               let obj={
                 name: $scope.uname_reg,
                 pwd: $scope.upass_reg,
@@ -58,7 +87,12 @@
 
               $scope.info.push(obj)
 
+              $scope.uname_reg=""
+              $scope.upass_reg=""
+              $scope.uemail_reg=""
+              $scope.unum_reg=""
               console.log($scope.info);
+            }
            }
 
 
@@ -73,6 +107,33 @@
                     alert("Invalid Credentials")
                 }
             });
+           }
+
+
+           //Delete the list
+
+           $scope.fruits=[{
+            name:"mango"
+           },
+           {
+            name:"apple"
+           },
+           {
+            name:"pomogrenate"
+           }]
+
+           $scope.deleteList=(fruit)=>{
+            
+             let arr=$scope.fruits.filter((e)=>{
+                 return e.name!=fruit
+             })
+             
+             console.log(arr);
+             $scope.fruits=arr
+
+            //
+            // $scope.fruits.splice(fruit,1)
+
            }
         }])
     </script>

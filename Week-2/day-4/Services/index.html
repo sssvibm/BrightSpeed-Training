@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="app" ng-controller="appCtrl">
+
+    <ul>
+        <li ng-repeat="i in fruits">{{i}}</li>
+    </ul>
+
+    <button ng-click="sendData('bannana')">sendData</button>
+    <button ng-click="getData()">getData</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="controller.js"></script>
+    <script src="service.js"></script>
+    
+</body>
+</html>

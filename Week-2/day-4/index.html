@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body ng-app="app" ng-controller="ctrl">
+    <h1>Normal</h1>
+    <ul>
+        <li ng-repeat="i in arr ">{{i.name}}</li>
+    </ul><hr>
+
+    <h1>ascending</h1>
+    <ul>
+        <li ng-repeat="i in arr | orderBy:c">{{i.name}}</li>
+    </ul><hr>
+    
+    <h1>descending</h1>
+    <ul>
+        <li ng-repeat="i in arr | orderBy:'-name'">{{i.name}}</li>
+    </ul><hr>
+    
+    <h1>words with i</h1>
+    <ul>
+        <li ng-repeat="i in arr |  filter:'i' ">{{i.name}}</li>
+    </ul><hr>
+    
+
+    <h1>ascending and words with i</h1>
+    <ul>
+        <li ng-repeat="i in arr |  filter:'i' | orderBy:'name'">{{i.name}}</li>
+    </ul>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", [])
+        app.controller("ctrl", ["$scope", function ($scope) {
+            $scope.arr = [
+                { name: "John", mark: 85, backlogs: 0 },
+                { name: "Charlie", mark: 78, backlogs: 1 },
+                { name: "Alice", mark: 72, backlogs: 2 },
+                { name: "Henry", mark: 75, backlogs: 2 },
+                { name: "Bob", mark: 90, backlogs: 1 },
+                { name: "Eve", mark: 65, backlogs: 3 },
+                { name: "Isabel", mark: 91, backlogs: 0 },
+                { name: "Diana", mark: 95, backlogs: 0 },
+                { name: "Frank", mark: 68, backlogs: 2 },
+                { name: "Grace", mark: 88, backlogs: 1 },
+                
+                
+            ]
+
+
+            $scope.c="name"
+
+
+        }])
+    </script>
+</body>
+
+</html>
