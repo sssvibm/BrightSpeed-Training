@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="app" ng-controller="lsCtrl">
+    <div id="log" ng-show="flag">
+      <h1>Login</h1>
+      <input type="text" ng-model="uname_log" placeholder="Enter the Name"><br><br>
+      <input type="password" ng-model="upass_log" placeholder="Enter the Password"><br><br>
+      <button ng-click="login()">Login</button><br><br>
+
+      <a >Havent Registered yet?</a><a href="" ng-click="nav()">Sign Up</a>
+
+    </div>
+
+    <div id="Reg" ng-show="!flag">
+        <h1>Register</h1>
+        <input type="text" ng-model="uname_reg" placeholder="Enter the name"><br><br>
+        <input type="email" ng-model="uemail_reg" placeholder="Enter your Mail"><br><br>
+        <input type="tel" ng-model="unum_reg" placeholder="Enter your Number"><br><br>
+        <input type="password" ng-model="upass_reg" placeholder="Enter the Password"><br><br>
+        <button ng-click="register()">Register</button><br><br>
+
+        <a >Already Registered?</a><a href="" ng-click="nav()">Login</a>
+
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script>
+        var app=angular.module("app",[])
+        app.controller("lsCtrl",["$scope",function($scope){
+           $scope.flag=true
+
+           $scope.nav=()=>{
+             if($scope.flag){
+                $scope.flag=false
+             }
+             else{
+                $scope.flag=true
+             }
+           }
+
+           $scope.info=[]
+
+           $scope.register=()=>{
+            console.log($scope.uname_reg);
+              let obj={
+                name: $scope.uname_reg,
+                pwd: $scope.upass_reg,
+                mail: $scope.uemail_reg,
+                num: $scope.unum_reg
+              }
+
+              $scope.info.push(obj)
+
+              console.log($scope.info);
+           }
+
+
+
+           $scope.login=()=>{
+            console.log($scope.uname_log);
+            $scope.info.forEach(ele => {
+                if(ele.name==$scope.uname_log && ele.pwd==$scope.upass_reg){
+                    alert("Login Successfull")
+                }
+                else{
+                    alert("Invalid Credentials")
+                }
+            });
+           }
+        }])
+    </script>
+</body>
+</html>

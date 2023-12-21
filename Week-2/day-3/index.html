@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="app" ng-controller="ctrl">
+    <button ng-click="loadData()">load data</button>
+    <button ng-click="sortData()">sort data</button>
+    <h1>{{data}}</h1>
+
+
+    <div>
+        <button ng-click="hideShow()">{{hs_var}}</button>
+        <h1 ng-show=isLoggedin>hola amigo!!</h1>
+    </div>
+    
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script>
+        var app=angular.module("app",[])
+        app.controller("ctrl",["$scope",function($scope){
+
+           $scope.loadData=()=>{
+              $scope.data=[
+            {"num":3,"value":"test"},
+            {"num":1,"value":"test"},
+            {"num":2,"value":"test"}
+    ]
+           }
+
+           $scope.sortData=()=>{
+            $scope.data.sort((a,b)=>a.num-b.num)
+
+           }
+
+
+
+           //hide and show
+           $scope.isLoggedin=true
+           $scope.hs_var="Hide"
+
+           $scope.hideShow=()=>{
+               $scope.isLoggedin=false
+
+           }
+
+
+        }])
+    </script>
+</body>
+</html>

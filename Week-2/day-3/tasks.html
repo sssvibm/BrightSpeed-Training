@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .h1 {
+        color: red;
+    }
+
+    table{
+        border: 2px black groove;
+        border-collapse: collapse;
+    }
+
+    th,td{
+        border: 2px black groove;
+    }
+</style>
+
+<body ng-app="app" ng-controller="taskCtrl">
+
+    <h1 ng-class="{h1:flag}" ng-click="changeColor()">Hello</h1>
+    <hr>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <button ng-show="hide_show">Login</button> <button ng-show="!hide_show">Signup</button><br><br>
+    <button ng-click="hideShow()">Toggle</button>
+    <hr>
+
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Country</th>
+        </tr>
+        <tr ng-repeat="i in info">
+            <td>{{i.name}}</td>
+            <td>{{i.country}}</td>
+
+        </tr>
+    </table><br><br><hr>
+
+
+    <form>
+        <label>Name:</label><input type="text" ng-model="name_mod"><br>
+        <label>Email:</label><input type="email" ng-model="mail_mod"><br>
+        <label>Contact-Number:</label><input type="tel" ng-model="cont_mod"><br>
+        <label>Date-of-Birth:</label><input type="date" ng-model="date_mod"><br>
+        <button ng-click="addObj()">Add</button>
+    </form>
+
+    <script>
+        var app = angular.module("app", [])
+        app.controller("taskCtrl", ["$scope", function ($scope) {
+            //task-1
+            $scope.flag = false
+            $scope.changeColor = () => {
+                $scope.flag = true
+            }
+
+
+            //task-2
+
+            $scope.hide_show = true
+            $scope.hideShow = () => {
+                if ($scope.hide_show)
+                    $scope.hide_show = false
+                else
+                    $scope.hide_show = true
+
+
+
+            }
+
+
+
+            //task-3
+            $scope.info = [{ name: "John", country: "USA" },
+            { name: "Maria", country: "Brazil" },
+            { name: "Ahmed", country: "Egypt" },
+            { name: "Sophie", country: "France" },
+            { name: "Carlos", country: "Mexico" },
+            { name: "Aya", country: "Japan" },
+            { name: "Anna", country: "Russia" },
+            { name: "Miguel", country: "Spain" },
+            { name: "Isabella", country: "Italy" },
+            { name: "Chen", country: "China" }]
+
+
+
+            //task-4
+            $scope.arr=[]
+
+            $scope.addObj=()=>{
+                var obj={
+                    name:$scope.name_mod,
+                    mail:$scope.mail_mod,
+                    number:$scope.cont_mod,
+                    dob:$scope.date_mod
+                }
+
+                $scope.arr.push(obj)
+                console.log($scope.arr);
+
+                $scope.name_mod=""
+                $scope.mail_mod=""
+                $scope.cont_mod=""
+                $scope.date_mod=""
+            }
+
+
+        }])
+    </script>
+</body>
+
+</html>

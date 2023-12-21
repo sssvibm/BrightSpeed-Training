@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h{
+            color: red;
+        }
+        img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body ng-app="app" ng-controller="directivesCtrl">
+
+    <button ng-click="imgChange()">Change</button>
+    <img ng-src="{{imgsrc}}" alt=""><br><br>
+
+
+    <h1 ng-class="{h:isApplied}">Hello</h1>
+    <button ng-click="apply()">Apply</button><br><br>
+    
+
+    <button ng-click="repeat()">Repeat</button>
+    <ul>
+        <li ng-repeat="i in arr">{{i.n}}</li>
+    </ul><br><br>
+
+    <button ng-click="vanish()">Vanish</button>
+    <h1 ng-if="if" ng-show="show">ng-if and ng-show</h1>
+    <button ng-click="hide()">Hide</button><br><br>
+
+    <input type="text" ng-model="name">
+    <p>{{name}}</p><br><br>
+
+    <input type="text" ng-model="city">
+    <p>{{::city}}</p>
+
+    <h1>{{"Vishnu" | uppercase}}</h1>
+    <h1>{{"Vishnu" | lowercase}}</h1>
+    <h1>{{today | date:"dd-MM-yyyy"}}</h1>
+    <h1>{{25 | currency}}</h1>
+    <h1>{{25 | currency:'EUR'}}</h1>
+    <h1>{{25 | currency:'INR'}}</h1>
+    <h1>{{ "hi da venna" | uppercase | limitTo:5 }}</h1>
+
+
+
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script>
+        var app=angular.module("app",[])
+        app.controller("directivesCtrl",["$scope",function($scope){
+            //ng-click ng-src
+            $scope.imgsrc=""
+            $scope.imgChange=()=>{
+                $scope.imgsrc="https://cdn.pixabay.com/photo/2023/10/22/20/11/flowers-8334774_1280.jpg"
+            }
+            
+
+
+            //ng-class
+            $scope.isApplied=false
+
+            $scope.apply=()=>{
+                $scope.isApplied=true
+            }
+
+            //ng-repeat
+            $scope.repeat=()=>{
+                $scope.arr=[{n:"Vishnu"},{n:"Guna"},{n:"Deek"},{n:"Vishnu"}]
+            }
+
+            //ng-if ng-show
+            $scope.if=true
+            $scope.show=true
+             $scope.vanish=()=>{
+                  $scope.if=false
+             }
+
+             $scope.hide=()=>{
+                  $scope.show=false
+             }
+
+
+             //two-way-binding
+             $scope.name="Vishnu"
+
+
+             //one-time-binding
+             $scope.city="Chennai"
+
+
+             //date filter
+             $scope.today=new Date()
+             
+
+
+
+
+
+
+
+        }])
+    </script>
+</body>
+</html>
