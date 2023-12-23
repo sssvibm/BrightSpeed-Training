@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="app">
+    <div ng-controller="displayCtrl">
+
+       <p ng-repeat="i in info">{{i.currencySymbol}}</p>
+       <button ng-click="displayData()">display</button>
+    </div>
+    
+    <br><br>
+
+    <div ng-controller="registerCtrl">
+
+        <input type="text" name="" id="" placeholder="name" ng-model="name">
+        <input type="text" name="" id="" placeholder="email"ng-model="email" >
+        <input type="text" name="" id="" placeholder="pass" ng-model="pass">
+        <button ng-click="getFormData()">Register</button>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="index.js"></script>
+    <script src="controller.js"></script>
+    <script src="service.js"></script>
+</body>
+</html>
