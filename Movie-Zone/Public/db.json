@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Vishnu",
+      "pwd": "1234",
+      "mail": "v@gmail.com",
+      "fav": []
+    }
+  ]
+}
