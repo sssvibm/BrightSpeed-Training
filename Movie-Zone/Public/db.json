@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Vishnu",
+      "pwd": "1234",
+      "mail": "v@gmail.com",
+      "fav": [
+        1152628,
+        19978
+      ]
+    },
+    {
+      "name": "Sasuke",
+      "pwd": "1111",
+      "mail": "s@gmail.com",
+      "fav": [],
+      "id": 2
+    }
+  ]
+}
